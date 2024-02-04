@@ -6,6 +6,7 @@ import { AuthProvider } from "./contexts/auth.context";
 import MyPage from "./pages/MyPage";
 import { ProfileProvider } from "./contexts/profile.context";
 import CartPage from "./pages/CartPage";
+import ProductDetailPage from "./pages/ProductDetailPage";
 
 function App() {
   return (
@@ -19,6 +20,10 @@ function App() {
                 <Route path="/sign-in" element={<SignInPage />} />
                 <Route path="/my-page" element={<MyPage />} />
                 <Route path="/cart-Page" element={<CartPage />} />
+                <Route
+                  path="/product/:productId"
+                  element={<ProductDetailPage />}
+                />
               </Route>
             </Routes>
           </ProfileProvider>

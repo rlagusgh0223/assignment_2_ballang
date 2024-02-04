@@ -1,7 +1,8 @@
 import React from "react";
+import Page from "../../components/Page";
 
 function CartPage() {
-  return <div>CartPage</div>;
+  return <Page fullWidth>CartPage</Page>;
 }
 
 export default CartPage;

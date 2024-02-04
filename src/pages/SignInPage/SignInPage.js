@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useAuth } from "../../contexts/auth.context";
 import HomePage from "../HomePage";
+import Page from "../../components/Page";
 
 function SignInPage() {
   const { isLoggedIn, signIn } = useAuth();
@@ -18,7 +19,7 @@ function SignInPage() {
   };
 
   return (
-    <div>
+    <Page>
       {isLoggedIn ? (
         <HomePage />
       ) : (
@@ -38,7 +39,7 @@ function SignInPage() {
           <button onClick={handleClickSignIn}>로그인</button>
         </>
       )}
-    </div>
+    </Page>
   );
 }
 

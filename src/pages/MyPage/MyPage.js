@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { useProfile } from "../../contexts/profile.context";
+import Page from "../../components/Page";
 
 function MyPage() {
   const { updateNickname } = useProfile();
@@ -10,7 +11,7 @@ function MyPage() {
     updateNickname(inputValue);
   };
   return (
-    <>
+    <Page>
       <section>
         <h2>닉네임 수정</h2>
         <input
@@ -20,7 +21,7 @@ function MyPage() {
         />
         <button onClick={handleClickUpdateNickname}>닉네임 변경</button>
       </section>
-    </>
+    </Page>
   );
 }
 
